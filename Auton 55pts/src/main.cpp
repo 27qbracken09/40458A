@@ -37,7 +37,7 @@ int main() {
     chassis.clearSensors(false);
     
     //two_green();
-    test4green();
+    //test4green();
     //right_auton();    
     //vex::thread thread1 = thread(Touchledtest);
     this_thread::sleep_for(100);
