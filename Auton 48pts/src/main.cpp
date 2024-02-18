@@ -13,7 +13,7 @@ using namespace vex;
 
 
 //Declare Drive Chassis, L, R, Gyro, Wheel Travel(inches) 7.874
-Drive chassis(PORT4,PORT11,PORT1,15.758);
+Drive chassis(PORT4,PORT11,PORT1,7.874);
 
 
 
