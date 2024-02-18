@@ -135,7 +135,7 @@ void buttonFUP_pressed(){
 }
 
 int current_auton = 0;
-enum Autontype{LEFT_AUTON, RIGHT_AUTON, MID_AUTON, RED_BLOCK_AUTON};
+enum Autontype{LEFT_AUTON, RIGHT_AUTON, THIRD_BASKET, MID_AUTON, RED_BLOCK_AUTON};
 void touchled_function(){
     TouchLED.setBrightness(100);
     TouchLED.setColor(green);
@@ -152,7 +152,9 @@ switch (current_auton) {
             red_block();
             break;
 
-        
+        case THIRD_BASKET:
+            test4green();
+            break;
         
         case MID_AUTON:
             TouchLED.setColor(blue);

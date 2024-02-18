@@ -31,10 +31,9 @@ void left_auton(){
   
 
   //Picking Up first Row of greens
-  //For auton
-  //chassis.DriveFor(25);
+  chassis.DriveFor(25);
 
-  
+  /*Old
   chassis.DriveFor(5);
   wait(green_cube_delay, seconds);
   chassis.DriveFor(5);
@@ -42,7 +41,7 @@ void left_auton(){
   chassis.DriveFor(6);
   wait(green_cube_delay,seconds);
   chassis.DriveFor(7);
-  
+  */
 
   //Reversing into goal
   chassis.DriveFor(-20);
@@ -97,10 +96,10 @@ void right_auton(){
   
 
   //Picking Up first Row of greens
-  //chassis.DriveFor(25);
-  //chassis.DriveFor(20);
+  chassis.DriveFor(25);
+  chassis.DriveFor(20);
 
-  
+  /* Old 
   chassis.DriveFor(5);
   wait(green_cube_delay, seconds);
   chassis.DriveFor(5);
@@ -110,9 +109,9 @@ void right_auton(){
   chassis.DriveFor(7);
   wait(green_cube_delay,seconds);
   
-
+  */
  //Old 140
- chassis.TurnTo(-140);
+ chassis.TurnTo(-155);
 
 
 
