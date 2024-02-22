@@ -6,11 +6,13 @@
 
 class intake{
     public:
-        intake(int port, bool reversed, int speed);
+        intake(int port_1, int port_2, bool reversed, int speed);
     
         void set_intake(int intake_state);
 
-        vex::motor intake_motor;
+        vex::motor intake_motor_2;
+        vex::motor intake_motor_1;
+        vex::motor_group intake_motor;
         int status = OFF;
     private:
         int speed = 100;
