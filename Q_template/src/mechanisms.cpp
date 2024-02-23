@@ -68,7 +68,7 @@ void Touchledtest(){
 
 
 
-outtake Outtake(PORT6, PORT12, false, 100);
+outtake Outtake(PORT10, PORT12, false, 100);
 
 
 
