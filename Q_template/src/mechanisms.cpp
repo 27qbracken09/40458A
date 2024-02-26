@@ -116,7 +116,7 @@ void buttonLDOWN_pressed(){
 
 void buttonRUP_pressed(){
     Outtake.set_outtake(UP);
-    wait(2.23,sec);
+    wait(2.6,sec);
     Outtake.set_outtake(STOP);
 
 }
