@@ -82,7 +82,7 @@ void controllerInit(){
     //Controller.ButtonRUp.released(buttonsR_released);
     //Controller.ButtonRDown.released(buttonsR_released);
 
-    //Controller.ButtonFUp.pressed(buttonFUP_pressed);
+    Controller.ButtonFUp.pressed(buttonFUP_pressed);
 
     Controller.ButtonEUp.pressed(buttonEUP_pressed);
     Controller.ButtonEUp.released(buttonEUP_released);
@@ -131,16 +131,9 @@ void buttonsR_released(){
 }
 
 void buttonFUP_pressed(){
-    if (drivemethod == ARCADE){
-        Brain.playSound(siren);
-        drivemethod = TANK;
-    
-    }
-    else{
-        //vex::soundType::
-        Brain.playSound(wrongWay);
-        drivemethod = ARCADE;
-    }
+   Outtake.set_outtake(UP);
+   wait(1.5,sec);
+   Outtake.set_outtake(STOP);
 }
 
 void buttonEUP_pressed(){
