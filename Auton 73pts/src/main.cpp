@@ -13,7 +13,7 @@ using namespace vex;
 
 
 //Declare Drive Chassis, L, R, Gyro, Wheel Travel(inches) 7.874
-Drive chassis(PORT4,PORT11,PORT1,15.758);
+Drive chassis(PORT4,PORT11,PORT2,15.758);
 
 
 
@@ -21,7 +21,7 @@ Drive chassis(PORT4,PORT11,PORT1,15.758);
 int main() {
 
     chassis.SetPID(0.6,0,0.2,0,2,3000,150000, 1);
-    chassis.SetTurnPID(1.5,0,0.5,0,2,500,150000, 1);
+    chassis.SetTurnPID(1.5,0,0,1,2,500,10000, 1);
 	
     Brain.Screen.print("Quinn's Code V1.1\n");
     Brain.Screen.print("Battery: ");
@@ -34,7 +34,8 @@ int main() {
     
     
     controllerInit();
-    chassis.clearSensors(false);
+    chassis.clearSensors(true);
+    wait(2,sec);
     
     //two_green();
     //test4green();
@@ -43,8 +44,7 @@ int main() {
     //left_auton();
     //right_auton();
     //plus_auton();
-
-    //chassis.TurnTo(-90);
+    
     
 
     
