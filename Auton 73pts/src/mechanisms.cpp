@@ -2,7 +2,7 @@
 
 controller Controller = controller();
 
-intake::intake(int port, bool reversed, int speed) : intake_motor(port,reversed){
+intake::intake(int port_1, int port_2, bool reversed, int speed) : intake_motor_1(port_1,reversed), intake_motor_2(port_2,!reversed), intake_motor(intake_motor_1, intake_motor_2){
     intake_motor.setVelocity(speed,percent);
 }
 /*outtake::outtake(int port, bool reversed, int speed) : outtake_motor(port,reversed){
@@ -49,7 +49,7 @@ void outtake::set_outtake(int outtake_state){
             break;
     }
 }
-intake Intake(PORT5,true,100);
+intake Intake(PORT6,PORT5,false,100);
 //touchled TouchLED = touchled(PORT9);
 vex::optical Optical1 = vex::optical(vex::PORT9);
 
@@ -70,7 +70,7 @@ void Touchledtest(){
 
 
 
-outtake Outtake(PORT6, PORT12, false, 100);
+outtake Outtake(PORT10, PORT12, false, 100);
 
 
 
