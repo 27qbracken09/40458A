@@ -4,7 +4,7 @@ using namespace vex;
 
 // A global instance of brain used for printing to the V5 Brain screen
 brain  Brain;
-touchled TouchLED(PORT3);
+touchled TouchLED(PORT1);
 
 int drivemethod = ARCADE;
 
