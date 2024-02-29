@@ -31,22 +31,16 @@ void left_auton(){
   
 
   //Picking Up first Row of greens
-  chassis.DriveFor(13);
+  chassis.DriveFor(26);
 
-  //Check if intake is jammed, and unjam it
-  printf("%f", Intake.intake_motor.current(pct));
-  if(Intake.intake_motor.current(pct) > 60){
-  Intake.set_intake(REVERSE);
-  wait(0.25,sec);
-  Intake.set_intake(FORWARD);
-  wait(0.25,sec);
-  Intake.set_intake(REVERSE);
-  wait(0.25,sec);
-  Intake.set_intake(FORWARD);
-  wait(1,sec);
-  }
+  chassis.DriveFor(-20);
+  chassis.TurnTo(-55);
+  chassis.DriveFor(35);
+  chassis.TurnTo(35);
 
-  chassis.DriveFor(13);
+  chassis.DriveFor(-35);
+
+  
   
 
   /*Old
@@ -58,10 +52,10 @@ void left_auton(){
   wait(green_cube_delay,seconds);
   chassis.DriveFor(7);
   */
-
+/*
   //Reversing into goal
   chassis.DriveFor(-20);
-  chassis.TurnTo(55); //60 Original
+  chassis.TurnTo(60); //60 Original
   chassis.DriveFor(-25);
   //chassis.DriveFor(-2);
 
@@ -78,14 +72,14 @@ void left_auton(){
   wait(1,sec);
   }
   
-
+*/
   //Dumping
   Outtake.set_outtake(UP);
   wait(2.4,seconds);
   Outtake.set_outtake(STOP);
   Outtake.outtake_motor.stop(hold);
   Outtake.outtake_motor_2.stop(hold);
-  wait(0.5, seconds);
+  wait(1.5, seconds);
   Outtake.outtake_motor_group.spinToPosition(0,degrees,false);
 
   //
@@ -156,9 +150,9 @@ void right_auton(){
   //chassis.DriveFor(20);
   chassis.TurnTo(-60);
 
-  chassis.DriveFor(5);
+  chassis.DriveFor(8);
 
-  chassis.DriveFor(-24);
+  chassis.DriveFor(-30);
   
 
 
@@ -512,7 +506,7 @@ void plus_auton(){
 
 
     Intake.set_intake(FORWARD);
-    chassis.DriveFor(20);
+    chassis.DriveFor(19);
 
     chassis.DriveFor(-42);
 
@@ -529,12 +523,12 @@ void plus_auton(){
   wait(1,sec);
   }
 
-    chassis.TurnTo(-190);
+    chassis.TurnTo(-195);
 
     chassis.DriveFor(10);
     chassis.TurnTo(-165);
 
-    chassis.DriveFor(-25);
+    chassis.DriveFor(-27);
 
 
     
